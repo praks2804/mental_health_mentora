@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lavendar">#9C27B0</color>
+    <color name="pastel_purple">#D6D0FB</color>
+    <color name="coral_red">#FF6F61</color>
+    <color name="boxBackground">#FFFFFF</color>
+    <color name="textPrimary">#000000</color>
+    <color name="lightGray">#D6D6D6</color>
+    <color name="pagePurple">#6B4DE6</color>
+
+    <!-- Card gradients (balanced for a purple page) -->
+    <color name="card1_start">#14B8A6</color> <!-- teal -->
+    <color name="card1_end">#3B82F6</color>   <!-- blue -->
+
+    <color name="card2_start">#A78BFA</color> <!-- lavender -->
+    <color name="card2_end">#6366F1</color>   <!-- indigo -->
+
+    <color name="card3_start">#FDBA74</color> <!-- peach -->
+    <color name="card3_end">#F43F5E</color>   <!-- coral -->
+
+    <color name="card4_start">#C4B5FD</color> <!-- lilac -->
+    <color name="card4_end">#F472B6</color>   <!-- rose -->
+
+    <color name="chipText">#FFFFFFFF</color>
+
+
+</resources>

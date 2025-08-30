@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:padding="15dp"
+    android:id="@+id/main"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="6dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:id="@+id/cardRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_card_1">
+
+        <!-- Time + Date -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="At 9:58 PM…"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:textColor="#E6FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvDateChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="10dp"
+                android:text="August 19"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/chipText" />
+        </LinearLayout>
+
+        <!-- Prompt / Title -->
+        <TextView
+            android:id="@+id/tvPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Prompt will appear here"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:visibility="gone"/> <!-- hidden if no prompt -->
+
+        <!-- Journal Body (2 lines max) -->
+        <TextView
+            android:id="@+id/tvBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Learnt about my emotions and how to handle it."
+            android:textSize="14sp"
+            android:textColor="#E6FFFFFF"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

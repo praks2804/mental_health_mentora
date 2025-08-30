@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".UserPageActivity"
+    android:id="@+id/main">
+
+    <!-- Top Greeting Box -->
+    <LinearLayout
+        android:id="@+id/greetingBox"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_rounded_light_purple"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Heart Icon (Top Left) -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_heart"
+            android:alpha="0.9"
+            android:layout_gravity="start" />
+
+        <!-- Water Droplet Icon (Top Right) -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_water_droplet"
+            android:alpha="0.7" />
+
+        <!-- Greeting Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hey! I'm Mentora"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="-50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Personal Wellness Guide"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp" />
+    </LinearLayout>
+
+    <!-- Center Heart Icon in Circle -->
+    <ImageView
+        android:id="@+id/centerHeart"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/greetingBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_circle_light"
+        android:padding="20dp" />
+
+    <!-- Right faint icon -->
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_grid_faint"
+        android:alpha="0.9"
+        android:layout_alignBottom="@id/centerHeart"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp" />
+
+    <!-- "New User" label box -->
+    <TextView
+        android:id="@+id/newUserLabel"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/centerHeart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_rounded_box_light"
+        android:text="New User"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:gravity="center" />
+
+    <!-- Beat Icon Between Label and Buttons -->
+    <ImageView
+        android:id="@+id/beatIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/newUserLabel"
+        android:layout_marginStart="30dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_beat"
+        android:alpha="0.9" />
+
+    <!-- Bottom Buttons -->
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/beatIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/NoBtn"
+            android:layout_width="135dp"
+            android:layout_height="50dp"
+            android:text="No"
+            android:textSize="14dp"
+            android:background="@drawable/rounded_purple"
+            android:textColor="#7B1FA2"
+            android:textAllCaps="false"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/YesBtn"
+            android:layout_width="135dp"
+            android:layout_height="50dp"
+            android:text="Yes"
+            android:textSize="14dp"
+            android:background="@drawable/rounded_purple"
+            android:textColor="#7B1FA2"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <!-- Bottom faint icon -->
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="150dp"
+        android:layout_marginStart="24dp"
+        android:translationX="240dp"
+        android:src="@drawable/ic_drips"
+        android:alpha="0.7" />
+</RelativeLayout>

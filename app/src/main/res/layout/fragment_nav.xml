@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".BlankFragment">
+
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="5">
+
+        <!-- Home Icon -->
+        <ImageButton
+            android:id="@+id/homeBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            android:padding="18dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            android:contentDescription="Home" />
+
+        <!-- Rupee Icon -->
+        <ImageButton
+            android:id="@+id/journalBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_journal"
+            android:padding="18dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            android:contentDescription="Journal" />
+
+        <!-- Graph Icon -->
+        <ImageButton
+            android:id="@+id/AiBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@drawable/ic_ai"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            android:contentDescription="Ai" />
+
+        <!-- Profile Icon -->
+        <ImageButton
+            android:id="@+id/ProgressBtnBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@drawable/ic_progress_overview"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            android:contentDescription="Progress_overview" />
+
+        <ImageButton
+            android:id="@+id/ProfileBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@drawable/ic_profile"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+
+
+</RelativeLayout>

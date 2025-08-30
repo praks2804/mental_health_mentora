@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/page_background"
+    tools:context=".StartAssessmentActivity">
+
+    <!--image-->
+    <ImageView
+        android:layout_width="202dp"
+        android:layout_height="199dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/yoga" />
+
+    <!--title-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mental Wellness Check"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp"/>
+
+    <!--subtitle-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Answer 10 quick questions to\n check your mental wellness"
+        android:layout_gravity="center"
+        android:textColor="#444444"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!--time estimate-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Takes about2-3 minutes"
+        android:textColor="#888888"
+        android:layout_gravity="center"
+        android:textSize="12sp"
+        android:layout_marginBottom="40dp"/>
+
+    <!--button-->
+    <Button
+        android:id="@+id/start_assessment_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/rounded_button"
+        android:text="Start assessment"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"/>
+
+    <!--Note-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your responses will be kept private and\nconfidential"
+        android:layout_gravity="center"
+        android:textColor="#888888"
+        android:textSize="12sp"/>
+
+</LinearLayout>

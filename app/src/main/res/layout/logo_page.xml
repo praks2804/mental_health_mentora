@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LogoPageActivity">
+
+    <!-- Top Left Purple Circle -->
+
+    <!-- Bottom Right Purple Circle -->
+    <ImageView
+        android:id="@+id/topCircle"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-28dp"
+        android:layout_marginTop="170dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_side_circle"
+        android:translationX="-100dp"
+        android:translationY="-100dp" />
+
+    <ImageView
+        android:id="@+id/bottomCircle"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_bottom_circle"
+        android:translationX="50dp"
+        android:translationY="50dp" />
+
+
+    <!-- Logo Image -->
+
+    <ImageView
+        android:id="@+id/smallBottomCircle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="202dp"
+        android:layout_marginBottom="-87dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_small_circle"
+        android:translationX="10dp"
+        android:translationY="20dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Logo" />
+
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:text="Mentora"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appName"
+        android:layout_centerHorizontal="true"
+        android:text="take  a deep breath"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="40dp" />
+
+    <!-- Get Started Button -->
+    <Button
+        android:id="@+id/getStartedBtn"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/subtitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Get Started"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="#7B1FA2"
+        android:background="@drawable/rounded_purple"/>
+</RelativeLayout>

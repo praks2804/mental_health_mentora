@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_background"
+    tools:context=".LoginActivity">
+
+    <!-- Decorative Background Circles and Icons -->
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="top|end"
+        android:src="@drawable/bg_top_circle"
+        android:alpha="0.15"
+        android:translationX="30dp"
+        android:translationY="-30dp" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_meditation"
+        android:alpha="0.9"
+        android:translationX="50dp"/>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_heart_small"
+        android:alpha="0.9" />
+
+    <!-- Main Login Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="40dp" />
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint=" Email"
+            android:textSize="14dp"
+            android:drawableStart="@drawable/ic_email"
+            android:paddingStart="12dp"
+            android:background="@drawable/bg_input_box"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint=" Password"
+            android:textSize="14dp"
+            android:fontFamily="@font/inter_regular"
+            android:drawableStart="@drawable/ic_lock"
+            android:paddingStart="12dp"
+            android:background="@drawable/bg_input_box"
+            android:inputType="textPassword"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Forgot Password -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password"
+            android:textColor="#000000"
+            android:gravity="end"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Circle behind Login Button -->
+
+            <!-- Background Circle -->
+
+            <!-- Login Button -->
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:alpha="0.9"
+            android:src="@drawable/bg_bottom_circle"
+            android:translationX="-120dp"
+            android:translationY="50dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginBtn"
+                android:layout_width="265dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_button"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+
+
+        <!-- OR Divider -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#80000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  OR  "
+                android:textColor="#80000000" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#80000000" />
+        </LinearLayout>
+
+        <!-- Google Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Sign in with Google"
+            android:textSize="14dp"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_input_box"
+            android:textColor="#000000" />
+
+        <!-- Bottom Decorative Circle -->
+        <ImageView
+            android:id="@+id/bottomCircle"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="-28dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_bottom_circle"
+            android:translationX="140dp"
+            android:translationY="10dp" />
+    </LinearLayout>
+</FrameLayout>
