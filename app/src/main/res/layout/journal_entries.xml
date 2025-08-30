@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JournalEntriesActivity">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Journal Entries"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:background="@drawable/page_background"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- STREAK -->
+            <TextView
+                android:id="@+id/streakNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔥 0 day Streak"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/light_rounded_button"
+                android:padding="10dp"
+                android:layout_gravity="start"
+                android:textStyle="bold"/>
+
+            <!-- REMINDER CARD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:layout_marginTop="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_clock"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="10dp"
+                    android:text="Do a journal today to extend your daily streak"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+            <!-- PROMPTS -->
+            <TextView
+                android:id="@+id/promptText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's prompts"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/prompt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_rounded_button"
+                android:padding="14dp"
+                android:layout_marginTop="8dp"
+                android:text="Prompt 1"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"/>
+
+            <TextView
+                android:id="@+id/prompt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_rounded_button"
+                android:padding="14dp"
+                android:layout_marginTop="8dp"
+                android:text="Prompt 2"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"/>
+
+            <TextView
+                android:id="@+id/prompt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_rounded_button"
+                android:padding="14dp"
+                android:layout_marginTop="8dp"
+                android:text="Prompt 3"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"/>
+
+            <!-- BUTTONS -->
+            <Button
+                android:id="@+id/startJournalEntryBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Start Journal Entry"
+                android:background="@drawable/rounded_button"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/myJournalBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="My Journal"
+                android:background="@drawable/light_rounded_button"
+                android:textColor="@color/black" />
+
+            <!-- WRITING STREAK TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Writing Streak"
+                android:textStyle="bold"
+                android:layout_marginTop="22dp"/>
+
+            <!-- DAY CIRCLES -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/dayCirclesLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Sunday to Saturday -->
+                    <TextView
+                        android:id="@+id/daySun"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="S"
+                        android:background="@drawable/journal_circle_empty"/>
+
+                    <TextView
+                        android:id="@+id/dayMon"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:text="M"
+                        android:background="@drawable/journal_circle_empty"/>
+
+                    <TextView
+                        android:id="@+id/dayTue"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:text="T"
+                        android:background="@drawable/journal_circle_empty"/>
+
+                    <TextView
+                        android:id="@+id/dayWed"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:text="W"
+                        android:background="@drawable/journal_circle_empty"/>
+
+                    <TextView
+                        android:id="@+id/dayThu"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:text="T"
+                        android:background="@drawable/journal_circle_empty"/>
+
+                    <TextView
+                        android:id="@+id/dayFri"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:text="F"
+                        android:background="@drawable/journal_circle_empty"/>
+
+                    <TextView
+                        android:id="@+id/daySat"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:text="S"
+                        android:background="@drawable/journal_circle_empty"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Nav -->
+    <include layout="@layout/fragment_nav"/>
+</RelativeLayout>

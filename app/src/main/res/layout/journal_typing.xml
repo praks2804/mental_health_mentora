@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_background"
+    tools:context=".JournalTypingActivity">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNav"
+        android:padding="24dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Back Arrow -->
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/arrow"
+                android:layout_gravity="start" />
+
+            <!-- Journal Entry line left + text + line right -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightGray"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/journalEntryNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Journal Entry #1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightGray"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- User Name -->
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingTop="4dp"
+                android:layout_marginTop="12dp" />
+
+            <!-- Prompt Question (NEW) -->
+            <TextView
+                android:id="@+id/promptQuestionTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(Prompt will appear here)"
+                android:textColor="#444444"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:layout_marginTop="16dp"
+                android:textStyle="italic"
+                android:visibility="gone"/>
+
+            <!-- Typing input -->
+            <EditText
+                android:id="@+id/entryInput"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="20dp"
+                android:hint="Write here..."
+                android:padding="16dp"
+                android:background="@drawable/light_rounded_button"
+                android:gravity="top|start"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:overScrollMode="always" />
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/saveJournalBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:text="Save journal entry"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_button" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/fragment_nav"/>
+
+</RelativeLayout>

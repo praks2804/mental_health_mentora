@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApp"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ItemJournalEntryActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".MyJournalActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".SuggestionDetailActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".NavHeaderActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".ProfilePageActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".HappyMusicPageActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".StressReliefMusicActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".ProgressOverviewActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" /> <!-- <activity -->
+        <!-- android:name=".AiChatBotActivity" -->
+        <!-- android:exported="true" -->
+        <!-- android:theme="@style/Theme.AppCompat.NoActionBar" /> -->
+        <activity
+            android:name=".MeditationTimerActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".MoodTrackerActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".PasswordChangedActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".ResetYourPassword1Activity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".ResetYourPasswordActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".InboxPasswordActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".ResetpasswordActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".HomepageActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".MeditationLibraryActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".JournalTypingActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".JournalEntriesActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".QuestionsPgActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".StartAssessmentActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".AppActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".AppPermissionActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".UserPageActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name=".LogoPageActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MyApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
