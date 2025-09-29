@@ -47,43 +47,43 @@ public class MyJournalActivity extends AppCompatActivity {
         rvJournal.setLayoutManager(new LinearLayoutManager(this));
 
         journalList = new ArrayList<>();
-//        adapter = new JournalAdapter(this, journalList);
+        adapter = new JournalAdapter(this, journalList);
         rvJournal.setAdapter(adapter);
 
         // ✅ fetch journals from backend
-//        fetchUserJournals();
+        fetchUserJournals();
     }
 
-//    private void fetchUserJournals() {
-//        Call<JournalResponse> call = apiService.getUserJournals(userId);
-//        call.enqueue(new Callback<JournalResponse>() {
-//            @Override
-//            public void onResponse(Call<JournalResponse> call, Response<JournalResponse> response) {
-//                if (response.isSuccessful() && response.body() != null && response.body().isSuccess()) {
-//                    journalList.clear();
-//                    for (JournalResponse.JournalItem item : response.body().getData()) {
-//                        Log.d("MyJournalActivity", "Journal item -> " +
-//                                "date=" + item.getDate() +
-//                                ", time=" + item.getTime() +
-//                                ", title=" + item.getTitle() +
-//                                ", text=" + item.getText());
-//
-//                        journalList.add(new JournalEntryyyy(
-//                                item.getTime(),
-//                                item.getDate(),
-//                                item.getTitle(),
-//                                item.getText()
-//                        ));
-//                    }
-//
-//                    adapter.notifyDataSetChanged();
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<JournalResponse> call, Throwable t) {
-//                Log.e("MyJournalActivity", "Failed to fetch journals: " + t.getMessage());
-//            }
-//        });
-//    }
+    private void fetchUserJournals() {
+        Call<JournalResponse> call = apiService.getUserJournals(userId);
+        call.enqueue(new Callback<JournalResponse>() {
+            @Override
+            public void onResponse(Call<JournalResponse> call, Response<JournalResponse> response) {
+                if (response.isSuccessful() && response.body() != null && response.body().isSuccess()) {
+                    journalList.clear();
+                    for (JournalResponse.JournalItem item : response.body().getData()) {
+                        Log.d("MyJournalActivity", "Journal item -> " +
+                                "date=" + item.getDateDisplay() +
+                                ", time=" + item.getTimeDisplay() +
+                                ", title=" + item.getTitle() +
+                                ", text=" + item.getText());
+
+                        journalList.add(new JournalEntryyyy(
+                                item.getTimeDisplay(),
+                                item.getDateDisplay(),
+                                item.getTitle(),
+                                item.getText()
+                        ));
+                    }
+
+                    adapter.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JournalResponse> call, Throwable t) {
+                Log.e("MyJournalActivity", "Failed to fetch journals: " + t.getMessage());
+            }
+        });
+    }
 }
